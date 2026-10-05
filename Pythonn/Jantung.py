@@ -4,6 +4,15 @@ class Jantung:
         self.__detak_per_menit = detak_per_menit
         self.__kesehatan = kesehatan
         self.__is_bekerja = is_bekerja
+
+    # Method internal untuk memompa darah
+    def pompa(self) -> str:  #str ini hanya type hinting saja
+        if self.__is_bekerja and self.__kesehatan > 0:
+            return f"lub-dub ({self.__detak_per_menit} bpm)"
+        return "Jantung berhenti berdetak!"
+
+    def pacu_detak(self, tambahan_bpm: int):
+        self.__detak_per_menit += tambahan_bpm
     
     # Enkapsulasi
     def getDetakPerMenit(self):

@@ -16,6 +16,10 @@ class Hewan(MakhlukHidup):
         ) # end="" untuk mematikan \n otomatis pada print. Lalu koma di akhir hanya aturan tidak wajib 
         # aturan tersebut untuk memudahkan jika setelah end ada parameter lain lagi, kalau end ditaruh di one line tidak perlu pake koma
 
+    def berlari(self):
+        print(f"{self._nama} berlari kencang!")
+        self._jantung.pacu_detak(20)  # Interaksi alami komposisi
+
     def getJenisMakanan(self):
         return self._jenis_makanan
 

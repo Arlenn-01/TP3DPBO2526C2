@@ -24,9 +24,9 @@ class Peternak(Manusia):
 
         # jika list berisi
         if self._gender == "laki-laki":
-            print(f"== Daftar Ternak Pak {self._nama} ==")
+            print(f"== Daftar Ternak Bro {self._nama} ==")
         else:
-            print(f"== Daftar Ternak Bu {self._nama} ==")
+            print(f"== Daftar Ternak Mba {self._nama} ==")
             #print
         for h in self.__daftar_ternak: # h merepresentasikan objek Hewan (sapi/ayam)
             h.tampilkanInfo()
