@@ -9,6 +9,11 @@ class MakhlukHidup :
         self._energi = energi # energi kehidupan, kalau 0 mati
         self._jantung = Jantung() #komposisi karena makhluk hidup pasti punya jantung
 
+    # Delegasi method: MakhlukHidup menyuruh jantungnya memompa
+    def bernapas(self):
+        status_jantung = self._jantung.pompa()
+        print(f"{self._nama} sedang bernapas... Jantung: {status_jantung}")
+
     #enkapsulasi
     def getNama(self):
         return self._nama
