@@ -24,4 +24,3 @@ class Manusia(MakhlukHidup):
 
     def setGender(self, gender): 
         self._gender = gender
-    
