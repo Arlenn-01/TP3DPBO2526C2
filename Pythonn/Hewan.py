@@ -6,6 +6,16 @@ class Hewan(MakhlukHidup):
         self._jenis_makanan = jenis_makanan
         self._berat_kg = berat_kg
 
+    # nantinya method ini akan ditimpa (override oleh class anaknya)
+    def tampilkanInfo(self):
+        # Cetakan standar hewan
+        # self.__clas__.__name__ akan menunjukkan objek saat ini classnya apa (entah hewan atau sapi atau ayam)
+        print(
+            f"  - [{self.__class__.__name__}] Nama: {self._nama} | Usia: {self._usia} thn | Jenis Makanan: {self._jenis_makanan} | Berat: {self._berat_kg} kg",
+            end="",
+        ) # end="" untuk mematikan \n otomatis pada print. Lalu koma di akhir hanya aturan tidak wajib 
+        # aturan tersebut untuk memudahkan jika setelah end ada parameter lain lagi, kalau end ditaruh di one line tidak perlu pake koma
+
     def getJenisMakanan(self):
         return self._jenis_makanan
 
@@ -17,4 +27,3 @@ class Hewan(MakhlukHidup):
 
     def setBeratKG(self, berat_kg):
         self._berat_kg = berat_kg
-

@@ -7,6 +7,11 @@ class Sapi(Hewan):
         # otomatis berat_kg juga harus memiliki nilai dan bisa diakalin dengan sintaks diatas yang artinya parameter kiri akan menerima dari masukan init
         self._produksi_susu_liter = produksi_susu_liter
 
+    # override
+    def tampilkanInfo(self):
+        super().tampilkanInfo()
+        print(f" | Produksi susu: {self._produksi_susu_liter}L/hari")
+
     def getProduksiSusu(self):
         return self._produksi_susu_liter
 
